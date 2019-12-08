@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-let MovieReviews = ({ reviwes }) =>
+let MovieReviews = ({ reviews }) =>
 
-      <ul className="review-list">{reviwes ? reviwes.map(review =>{
+      <ul className="review-list">{reviews ? reviews.map(review =>{
              return <li className='review'>{review.display_title}</li>}) : null}
       </ul>
 

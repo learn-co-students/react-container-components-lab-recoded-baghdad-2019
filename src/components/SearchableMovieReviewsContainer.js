@@ -37,7 +37,7 @@ export default class SearchableMovieReviewsContainer extends Component {
                     <button type="submit">Search</button>
                 </form>
 
-                <MovieReviews reviwes={this.state.reviews} />
+                <MovieReviews reviews={this.state.reviews} />
             </div>
         )
     }
