@@ -35,8 +35,6 @@ sense to start with the more static (and thus simpler)
 specification for the components, but here are the main points that you should
 follow as you work:
 
-**Note:** Your tests will not run properly until you have at least built out the basics of each component and export/import them properly.
-
 #### `<MovieReviews>`
 
 * Your `MovieReviews` component should be stateless and functional.
@@ -64,16 +62,17 @@ to the following URLs:
 * For the latest movie reviews: `https://api.nytimes.com/svc/movies/v2/reviews/all.json`
 * To query the search API: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=<search-term>`
 
-If the api key in the starter code does not work in getting you the data you need, you can request an API key
+In addition to making calls to these URLs, you will need to request an API key
 from [here](https://developer.nytimes.com/signup). Once you have the key, you
-can "sign" your requests by attaching the key to the URL like so:
+will "sign" your requests by attaching the key to the URL like so:
 
 ```
-https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=<your-api-key>
+https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=<your key here>
 ```
-```
-https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=<your-api-key>&query=<search-term>
-```
+
+For fetching from the API, make sure to use
+[isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch), which
+provides a particularly nice API.
 
 For further information about the _New York Times_ Movie Reviews API — including
 a sandbox where you can view the data that the API returns — please consult
